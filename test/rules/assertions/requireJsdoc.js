@@ -1900,6 +1900,28 @@ export default {
   },
   {
     code: `
+      function bear() {}
+
+      /**
+       *
+       */
+      function quux () {
+
+      }
+      export default quux;
+    `,
+    options: [{
+      publicOnly: true,
+      require: {
+        FunctionExpression: true
+      }
+    }],
+    parserOptions: {
+      sourceType: 'module'
+    }
+  },
+  {
+    code: `
       function quux () {
 
       }
